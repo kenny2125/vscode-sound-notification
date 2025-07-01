@@ -1,6 +1,12 @@
 # 🔊 VSCode Sound Notification
 
-A Visual Studio Code extension that plays customizable sound notifications when you save files. Get instant audio feedback for your development workflow!
+
+A must extention for Vibe Coders and doom scrollers. 
+
+I did this because i often doom scroll right after prompting and i am constantly forgetting my prompt because i can't hear it lol.
+
+
+This is an  extension that plays customizable sound notifications when you save files like when github copilot saves or edited a  file in your codebase. 
 
 ## ✨ Features
 
@@ -10,11 +16,6 @@ A Visual Studio Code extension that plays customizable sound notifications when 
 - **Quick Toggle** - Easily enable/disable sounds from the status bar
 - **Lightweight & Fast** - Minimal performance impact on your editor
 
-## 🎵 Supported Events
-
-| Event | Description | Default |
-|-------|-------------|---------|
-| File Save | Plays when you save any file in the workspace | ✅ Enabled |
 
 ## 🚀 Installation
 
