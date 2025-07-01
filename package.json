@@ -1,0 +1,90 @@
+{
+  "name": "vscode-sound-notification",
+  "displayName": "Sound Notification",
+  "description": "Play custom sound notifications when you save files in VS Code",
+  "version": "1.0.0",
+  "publisher": "sound-notification",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/vscode-sound-notification.git"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "sound",
+    "notification",
+    "audio",
+    "save",
+    "feedback",
+    "file save"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "soundNotification.playTestSound",
+        "title": "Play Test Sound",
+        "category": "Sound Notification"
+      },
+      {
+        "command": "soundNotification.playWelcomeSound",
+        "title": "Play Welcome Sound",
+        "category": "Sound Notification"
+      },
+      {
+        "command": "soundNotification.toggleSounds",
+        "title": "Toggle Sound Notifications",
+        "category": "Sound Notification"
+      },
+      {
+        "command": "soundNotification.openSettings",
+        "title": "Open Sound Settings",
+        "category": "Sound Notification"
+      }
+    ],
+    "configuration": {
+      "title": "Sound Notification",
+      "properties": {
+        "soundNotification.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or disable all sound notifications"
+        },
+        "soundNotification.volume": {
+          "type": "number",
+          "default": 0.5,
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Volume level for sound notifications (0.0 to 1.0)"
+        },
+        "soundNotification.events.onSave": {
+          "type": "boolean",
+          "default": true,
+          "description": "Play sound when files are saved"
+        },
+        "soundNotification.customSounds.save": {
+          "type": "string",
+          "default": "",
+          "description": "Custom sound file path for save events (leave empty for default)"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "16.x",
+    "typescript": "^4.9.4"
+  }
+}
